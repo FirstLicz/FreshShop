@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#重载用户表，直接使用model app的名
+AUTH_USER_MODEL = "users.UserProfile"
 
 # Application definition
 
@@ -39,6 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
+    'trade',
+    'user_operation',
+    'goods',
+    'DjangoUeditor',
 ]
 
 MIDDLEWARE = [

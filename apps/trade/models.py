@@ -62,3 +62,27 @@ class OrderInfo(models.Model):
 
     def __str__(self):
         return str(self.order_sn)
+
+
+class OrderGoods(models.Model):
+    '''
+        订单里的商品详情
+    '''
+    order = models.ForeignKey(OrderInfo,on_delete=models.CASCADE,verbose_name='订单详情')
+    goods = models.ForeignKey(Goods,on_delete=models.CASCADE,verbose_name='商品')
+    goods_nums = models.IntegerField(default=0,verbose_name='商品的数量')
+    add_time = models.DateTimeField(default=datetime.now,verbose_name='添加时间')
+
+    class Meta:
+        verbose_name = '订单商品'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return str(self.order.order_sn)
+
+
+
+
+
+
+

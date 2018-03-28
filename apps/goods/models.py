@@ -36,6 +36,7 @@ class GoodsCategoryBrand(models.Model):
     '''
         品牌名
     '''
+    category = models.ForeignKey(GoodsCategory, verbose_name='商品类别', on_delete=models.CASCADE,null=True,blank=True)
     name = models.CharField(max_length=50,verbose_name='名称')
     desc = models.CharField(max_length=200,verbose_name='描述')
     image = models.ImageField(upload_to='brand/%Y/%m',verbose_name='品牌名图片路径')
@@ -101,7 +102,7 @@ class Banner(models.Model):
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     class Meta:
-        verbose_name= '轮播商品'
+        verbose_name= '首页商品轮播'
         verbose_name_plural = verbose_name
 
     def __str__(self):

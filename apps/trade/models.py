@@ -57,7 +57,7 @@ class OrderInfo(models.Model):
     add_time = models.DateTimeField(default=datetime.now,verbose_name='添加时间')
 
     class Meta:
-        verbose_name='订单'
+        verbose_name='订单详情'
         verbose_name_plural = verbose_name
 
     def __str__(self):
@@ -66,7 +66,7 @@ class OrderInfo(models.Model):
 
 class OrderGoods(models.Model):
     '''
-        订单里的商品详情
+        订单商品
     '''
     order = models.ForeignKey(OrderInfo,on_delete=models.CASCADE,verbose_name='订单详情')
     goods = models.ForeignKey(Goods,on_delete=models.CASCADE,verbose_name='商品')

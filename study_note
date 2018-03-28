@@ -27,3 +27,16 @@ class GoodsCategory(models.Model):
 
     def __str__(self):
         return self.name
+
+
+djangoUeditor
+安装 pip install DjangoUeditor
+settings.py 中加入 DjangoUeditor
+url.py 中加入
+url(r'^ueditor/',include('DjangoUeditor.urls' )),
+field_name = UEditorField()
+
+xadmin中注册插件流程
+在plugins app中的__init__.py文件中加入ueditor文件名
+adminx.py 中
+添加style_fields = {"filed_name":"flag_name"}

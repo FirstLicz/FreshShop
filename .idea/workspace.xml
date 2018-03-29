@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e4649d-5e43-40a3-8881-a50a5626fab8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_tools/data/category_data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_tools/data/product_data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_tools/import_category_data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_tools/import_goods_data.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db_tools/import_good_data.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Goods/2018/03/86bd692d80448dfea7306c8656c05a70.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Freshshop/settings.py" afterPath="$PROJECT_DIR$/Freshshop/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,14 +46,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="import_goods_data.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="import_goods_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_tools/import_goods_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state relative-caret-position="150">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="14" selection-end-column="14" />
               <folding>
                 <element signature="e#96#106#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="study_note" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/study_note">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,13 +163,13 @@
         <option value="$PROJECT_DIR$/apps/users/models.py" />
         <option value="$PROJECT_DIR$/Freshshop/urls.py" />
         <option value="$PROJECT_DIR$/apps/goods/adminx.py" />
-        <option value="$PROJECT_DIR$/study_note" />
         <option value="$PROJECT_DIR$/apps/user_operation/adminx.py" />
         <option value="$PROJECT_DIR$/db_tools/import_good_data.py" />
         <option value="$PROJECT_DIR$/apps/goods/models.py" />
         <option value="$PROJECT_DIR$/Freshshop/settings.py" />
         <option value="$PROJECT_DIR$/db_tools/import_category_data.py" />
         <option value="$PROJECT_DIR$/db_tools/import_goods_data.py" />
+        <option value="$PROJECT_DIR$/study_note" />
       </list>
     </option>
   </component>
@@ -210,12 +215,6 @@
               <item name="shopfresh" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopfresh" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shopfresh" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shopfresh" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shopfresh" type="b2602c69:ProjectViewProjectNode" />
@@ -404,7 +403,21 @@
       <option name="project" value="LOCAL" />
       <updated>1522305983448</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="配置media上传settings，初始化model数据；model独立使用">
+      <created>1522315000287</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1522315000287</updated>
+    </task>
+    <task id="LOCAL-00008" summary="配置media上传settings，初始化model数据；model独立使用">
+      <created>1522315095846</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1522315095846</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -445,7 +458,9 @@
     <MESSAGE value="用户操作model设计" />
     <MESSAGE value="app注册到xadmin和后台Ueditor配置" />
     <MESSAGE value="更改goods上传图片路径，增加初始化goods.py文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="更改goods上传图片路径，增加初始化goods.py文件" />
+    <MESSAGE value="配置media上传settings，初始化model数据；model独立使用" />
+    <MESSAGE value="删除不需要文件夹" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除不需要文件夹" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -456,6 +471,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="115" lean-forward="true" selection-start-line="2" selection-start-column="115" selection-end-line="2" selection-end-column="115" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -725,14 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/study_note">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/user_operation/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -858,11 +866,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db_tools/import_goods_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="150">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="14" selection-end-column="14" />
           <folding>
             <element signature="e#96#106#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study_note">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

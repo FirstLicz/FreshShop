@@ -40,3 +40,17 @@ xadmin中注册插件流程
 在plugins app中的__init__.py文件中加入ueditor文件名
 adminx.py 中
 添加style_fields = {"filed_name":"flag_name"}
+
+
+django 独立使用model，可以对数据进行初始化操作
+设置py文件路径配置到环境变量
+import sys
+import os
+
+pwd= os.path.dirname(os.path.relpath(__file__))
+sys.path.append(os.path.abspath(os.path.join(pwd,'..')))
+sys.path.append(pwd)
+os.environ.setdefault('DJANGO_SETTINGS_MODULE','Freshshop.settings')
+import django
+django.setup()
+

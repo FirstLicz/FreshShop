@@ -58,7 +58,7 @@ class Goods(models.Model):
     name = models.CharField(max_length=50,verbose_name='名称')
     goods_sn = models.CharField(max_length=80,verbose_name='商品编码',help_text='商品唯一货号')
     describe = models.CharField(max_length=200,verbose_name='描述',null=True,blank=True)
-    goods_detail = UEditorField(verbose_name='商品详情',help_text='商品详情富文本',null=True,blank=True,width = 600, height = 300, filePath = "Goods/files/",imagePath='Goods/images/"')
+    goods_detail = UEditorField(verbose_name='商品详情',help_text='商品详情富文本',null=True,blank=True,width = 900, height = 300, filePath = "Goods/files/",imagePath='Goods/images/"')
     image = models.ImageField(max_length=200,verbose_name='商品展示图片',upload_to='goods/images/',help_text='商品图片路劲')
     free_shipping = models.BooleanField(verbose_name='是否免邮',default=False)
     market_price = models.FloatField(verbose_name='市场价',default=0)

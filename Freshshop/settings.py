@@ -135,3 +135,8 @@ USE_TZ = False
 STATIC_URL = '/static/'
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
+
+#下载文件路径配置
+MEDIA_URL = '/media/'
+#上传文件路径配置
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

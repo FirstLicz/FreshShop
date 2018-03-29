@@ -41,7 +41,7 @@ xadmin中注册插件流程
 adminx.py 中
 添加style_fields = {"filed_name":"flag_name"}
 
-
+-----------------------------------------------------------------------------------------
 django 独立使用model，可以对数据进行初始化操作
 设置py文件路径配置到环境变量
 import sys
@@ -53,4 +53,8 @@ sys.path.append(pwd)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','Freshshop.settings')
 import django
 django.setup()
+
+-----------------------------------------------------------------------------------------
+
+
 

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'DjangoUeditor',
     'xadmin',
     'crispy_forms',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,20 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
 MEDIA_URL = '/media/'
 #上传文件路径配置
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+#在控制台显示sql日志
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'DEBUG' if DEBUG else 'INFO',
+        },
+    },
+}

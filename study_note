@@ -55,6 +55,15 @@ import django
 django.setup()
 
 -----------------------------------------------------------------------------------------
+web开发的基本概念
+web工程化
+1.webpack 第三方打包工具
+2.vue，vuex,vue-router，axios
+3.ES6 ，babel
 
-
-
+-----------------------------------------------------------------------------------------
+from django.core.serializers import serialize
+serialize字段序列化
+-----------------------------------------------------
+django-rest-framework 使用
+http://www.django-rest-framework.org/

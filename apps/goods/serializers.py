@@ -6,7 +6,7 @@ __time__ = '2018/3/30 16:34'
 
 
 from rest_framework import serializers
-from .models import Goods
+from .models import Goods,GoodsCategory
 
 
 class GoodsSerializer(serializers.Serializer):
@@ -27,3 +27,28 @@ class GoodsSerializer(serializers.Serializer):
         Update and return an existing `Snippet` instance, given the validated data.
         '''
         pass
+
+
+class GoodsCategorySerializer3(serializers.ModelSerializer):
+    class Meta:
+        model = GoodsCategory
+        fields = "__all__"
+
+
+class GoodsCategorySerializer2(serializers.ModelSerializer):
+    sub_cat = GoodsCategorySerializer3(many=True)
+    class Meta:
+        model = GoodsCategory
+        fields = "__all__"
+
+
+class GoodsCategorySerializer(serializers.ModelSerializer):
+    sub_cat = GoodsCategorySerializer2(many=True)
+    class Meta:
+        model = GoodsCategory
+        fields = "__all__"
+
+
+
+
+

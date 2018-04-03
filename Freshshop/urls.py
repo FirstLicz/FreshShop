@@ -19,6 +19,20 @@ import xadmin
 from django.views.static import serve
 from Freshshop.settings import MEDIA_ROOT
 from rest_framework.documentation import include_docs_urls
+from goods.views import GoodsListViewSet,GoodsCategoryViewSet
+from rest_framework.routers import DefaultRouter
+
+
+router = DefaultRouter()
+#注册router
+router.register(r'goods', GoodsListViewSet,base_name='goods')
+
+#配置category的url
+router.register(r'categorys',GoodsCategoryViewSet,base_name='categorys')
+
+goods_list = GoodsListViewSet.as_view({
+    'get': 'list',
+})
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
@@ -27,6 +41,7 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$',serve,{"document_root":MEDIA_ROOT}),
     url(r'^goods/',include('goods.urls' )),
 
+    url(r'^', include(router.urls)),
 
     #配置url文档功能
     url(r'^docs/',include_docs_urls(title='')),

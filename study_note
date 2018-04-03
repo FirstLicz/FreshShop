@@ -67,3 +67,9 @@ serialize字段序列化
 -----------------------------------------------------
 django-rest-framework 使用
 http://www.django-rest-framework.org/
+
+从服务器设置，跨域问题
+django-cors-headers
+
+
+

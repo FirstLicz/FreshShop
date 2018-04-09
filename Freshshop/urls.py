@@ -19,9 +19,10 @@ import xadmin
 from django.views.static import serve
 from Freshshop.settings import MEDIA_ROOT
 from rest_framework.documentation import include_docs_urls
+from rest_framework_jwt.views import obtain_jwt_token
 from goods.views import GoodsListViewSet,GoodsCategoryViewSet
 from rest_framework.routers import DefaultRouter
-
+from rest_framework.authtoken import views
 
 router = DefaultRouter()
 #注册router
@@ -47,4 +48,10 @@ urlpatterns = [
     url(r'^docs/',include_docs_urls(title='')),
 
     url(r'^api-auth/', include('rest_framework.urls')),
+
+    #rest_framework 认证TokenAuthentication
+    url(r'^api-token-auth/', views.obtain_auth_token),
+
+    #jwt登录认证接口
+    url(r'^login/', obtain_jwt_token),
 ]

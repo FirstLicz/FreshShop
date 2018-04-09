@@ -13,16 +13,17 @@ class FilterFields(django_filters.rest_framework.FilterSet):
     '''
         过滤设置类
     '''
-    name = django_filters.CharFilter(name='name',lookup_expr='iexact',help_text='模糊查找名字')
+    pricemin = django_filters.NumberFilter(name='shop_price', help_text="最低价格", lookup_expr='gte')
+    pricemax = django_filters.NumberFilter(name='shop_price', lookup_expr='lte')
 
-    top_category_filter = django_filters.NumberFilter(method='top_search_categroy')
+    top_category = django_filters.NumberFilter(method='top_search_categroy')
 
     def top_search_categroy(self,queryset, name, value):
         return queryset.filter(Q(category_id=value)|Q(category__parent_category_category_id=value)|Q(category__parent_category__category__parent_category_category_id=value))
 
     class Meta:
         model = Goods
-        fields = ['category', 'name']
+        fields = ['pricemin', 'pricemax',]
 
 
 

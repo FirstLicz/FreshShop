@@ -32,6 +32,12 @@ ALLOWED_HOSTS = []
 #重载用户表，直接使用model app的名
 AUTH_USER_MODEL = "users.UserProfile"
 
+#自定义变量来重载系统的认证方法
+AUTHENTICATION_BACKENDS=(
+    'users.views.Custombackend',
+)
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -51,6 +57,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'corsheaders',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -178,9 +185,17 @@ LOGGING = {
 
 
 #所有rest_framework配置都要放在变量中
-
-# REST_FRAMEWORK = {
-#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-#     'PAGE_SIZE': 6,
-# }
+#这属于全局配置，所有使用rest_framework 都是使用以下配置。
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        #'rest_framework.authentication.TokenAuthentication',
+        #在class 中配置
+    )
+}
 

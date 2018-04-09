@@ -37,6 +37,8 @@ AUTHENTICATION_BACKENDS=(
     'users.views.Custombackend',
 )
 
+#手机正则表达式
+MOBILE_REGX = r'^1[34578]\d{9}$'
 
 # Application definition
 

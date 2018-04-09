@@ -7,7 +7,13 @@ from django.views.generic import View
 from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth import get_user_model
 from django.db.models import Q
+from rest_framework import viewsets
+from rest_framework.generics import mixins
+from rest_framework.response import Response
+from rest_framework import status
 
+
+from .serializers import VerifyUserSerializer
 
 
 User = get_user_model()
@@ -26,10 +32,24 @@ class Custombackend(ModelBackend):
             return None
 
 
+class SendVerifyCodeViewSet(mixins.CreateModelMixin,viewsets.GenericViewSet):
+    '''
+        发送短信验证码
+    '''
+    serializer_class = VerifyUserSerializer
 
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
 
+        mobile = serializer.validated_data['mobile']
+        '''
+        发送验证码
+        '''
 
-
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
 
 
